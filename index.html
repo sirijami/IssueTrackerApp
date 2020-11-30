@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Real World Issue Tracker System
+        </title>
+        <link rel="stylesheet" type="text/css" href="./index.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <script  type="text/javascript" src="./index.js"></script>
+    <body>
+        <h1 style="margin:40px ;">Welcome to Issue Tracker</h1>
+        <form class="formStyle" id="issueTrackerForm" onsubmit="return false;">
+            <h3>Add New Issue</h3>
+            <div class="labelStyle"><label>Description</label></div>
+            <input size="100" type="text" placeholder="Describe the issue..."/>
+            </br>
+            <div class="labelStyle"><label>Severity</label></div>
+            <select name="Severity" id="Severity" width="100">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </br>
+            <div class="labelStyle"><label>Assigned To</label></div>
+            <input type="text" size="100" placeholder="Enter responsible..."/>
+            </br> </br>
+            <button onClick="saveIssue(this)" style="background-color:#247bca;" type="submit">Add</button>
+        </form>
+        <div id="issueList"></div>
+    </body>
+</html>
